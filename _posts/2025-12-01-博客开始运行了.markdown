@@ -1,0 +1,51 @@
+---
+layout: post
+title:  "博客开始运行了"
+date:   2025-12-01 00:00:00 +0800
+categories: 生活 技术
+---
+
+经过一番折腾，我的博客终于可以正常运行了！
+
+## 环境搭建
+
+这是一个基于 Jekyll 的静态博客，托管在 GitHub Pages 上。在本地开发时，需要安装 Ruby 和 Jekyll 环境。
+
+### 遇到的问题
+
+在安装过程中遇到了几个问题：
+
+1. **Bundler 版本兼容性**：最初使用的 Bundler 2.1.4 与 Ruby 3.4.7 不兼容，出现了 `uninitialized constant DidYouMean::SPELL_CHECKERS` 错误。
+
+2. **Ruby 3.4+ 标准库变更**：Ruby 3.4 版本移除了一些标准库 gem（如 csv、logger、base64、bigdecimal、webrick），需要手动添加到 Gemfile 中。
+
+### 解决方案
+
+通过以下步骤解决了这些问题：
+
+- 安装了兼容的 Bundler 2.7.2
+- 删除了旧的 Windows 平台生成的 `Gemfile.lock`，重新生成了 Linux 版本
+- 在 `Gemfile` 中添加了 Ruby 3.4+ 需要的标准库 gem
+
+## 运行博客
+
+现在可以通过以下命令启动本地开发服务器：
+
+```bash
+bundle exec jekyll serve
+```
+
+然后在浏览器中访问 `http://localhost:4000` 就可以看到博客了。
+
+## 写在最后
+
+代码是生活，诗歌是精神。我想做一个写诗的程序员。
+
+这个博客将记录我的技术学习、生活感悟，以及那些在代码与诗歌之间游走的时光。
+
+希望这里能成为我思想的一个栖息地，也希望能与同样热爱技术和生活的朋友们交流。
+
+---
+
+*博客已启动，新的旅程开始了！*
+
